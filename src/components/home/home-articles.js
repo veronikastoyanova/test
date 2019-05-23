@@ -28,7 +28,7 @@ export default () => (
         return (
           <div key={i} className={classes.ArticleBox}>
             <h3 className={classes.ArticleTitle}>{article.title}</h3>
-            <p>{article.content}</p>
+            <p className={classes.content}>{article.content}</p>
           </div>
         )
       })}

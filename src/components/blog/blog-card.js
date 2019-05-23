@@ -2,15 +2,14 @@ import React from 'react';
 import { Link } from 'gatsby';
 
 import classes from './blog-card.module.scss';
+import defaultImg from '../../assets/cars.jpg';
 
 export default ({ node }) => {
-  console.log(node);
-  
   return (
     <div className={classes.BlogCard}>
       <img
         className={classes.BlogImg}
-        src={node.frontmatter.thumbnail}
+        src={node.frontmatter.thumbnail || defaultImg}
         alt="blog"
       />
       <div className={classes.InfoBox}>
