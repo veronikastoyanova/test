@@ -8,7 +8,7 @@ export default ({ node }) => {
     <div className={classes.BlogCard}>
       <img
         className={classes.BlogImg}
-        src="https://source.unsplash.com/random/400x200"
+        src={node.frontmatter.thumbnail}
         alt="blog"
       />
       <div className={classes.InfoBox}>

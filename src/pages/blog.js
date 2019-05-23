@@ -36,6 +36,7 @@ export const pageQuery = graphql`
             description
             shortDescription
             audience
+            thumbnail
           }
         }
       }
