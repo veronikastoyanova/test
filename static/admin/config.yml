@@ -18,3 +18,4 @@ collections:
       - { name: description, label: Description }
       - { name: body, label: Body, widget: markdown }
       - { name: type, label: Type, widget: select, options: ['blog', 'webinar'], default: ['blog'] }
+      - { name: thumbnail, label: Featured Image , widget: "image" }

@@ -10,7 +10,7 @@ const Blog = ({ data }) => {
   return (
     <Layout>
       <h1>Blog</h1>
-      {posts.map(({ node }) => <BlogCard key={node.fields.slug} node={node}></BlogCard>)}
+      {posts.map(({ node }) => { console.log(node); return <BlogCard key={node.fields.slug} node={node}></BlogCard>})}
     </Layout>
   );
 };
