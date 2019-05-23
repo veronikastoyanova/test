@@ -1,59 +1,66 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
-
-// You can delete this file if you're not using it
-
-const path = require('path');
+const path = require(`path`)
+const { createFilePath } = require(`gatsby-source-filesystem`)
 
 exports.createPages = ({ graphql, actions }) => {
-  const { createPage } = actions;
-  const blogPostTemplate = path.resolve('src/templates/blog-post.js');
-  // Query for markdown nodes to use in creating pages.
-  // You can query for whatever data you want to create pages for e.g.
-  // products, portfolio items, landing pages, etc.
-  // Variables can be added as the second function parameter
+  const { createPage } = actions
+
+  const blogPost = path.resolve(`./src/templates/blog-post.js`)
   return graphql(
-    `query loadPagesQuery($limit: Int!) {
-        allMarkdownRemark(limit: $limit) {
+    `
+      {
+        allMarkdownRemark(
+          sort: { fields: [frontmatter___date], order: DESC }
+          limit: 1000
+        ) {
           edges {
             node {
-              excerpt
+              fields {
+                slug
+              }
               frontmatter {
                 title
-                date
-                path
               }
             }
           }
         }
       }
-    `,
-    { limit: 1000 }
+    `
   ).then(result => {
     if (result.errors) {
-      throw result.errors;
+      throw result.errors
     }
 
-    // Create blog post pages.
-    result.data.allMarkdownRemark.edges.forEach(edge => {
+    // Create blog posts pages.
+    const posts = result.data.allMarkdownRemark.edges
+
+    posts.forEach((post, index) => {
+      const previous = index === posts.length - 1 ? null : posts[index + 1].node
+      const next = index === 0 ? null : posts[index - 1].node
+
       createPage({
-        // Path for this page — required
-        path: `${edge.node.frontmatter.slug}`,
-        component: blogPostTemplate,
+        path: post.node.fields.slug,
+        component: blogPost,
         context: {
-          // Add optional context data to be inserted
-          // as props into the page component..
-          //
-          // The context data can also be used as
-          // arguments to the page GraphQL query.
-          //
-          // The page "path" is always available as a GraphQL
-          // argument.
-        }
-      });
-    });
-  });
-};
+          slug: post.node.fields.slug,
+          previous,
+          next,
+        },
+      })
+    })
+
+    return null
+  })
+}
+
+exports.onCreateNode = ({ node, actions, getNode }) => {
+  const { createNodeField } = actions
+
+  if (node.internal.type === `MarkdownRemark`) {
+    const value = createFilePath({ node, getNode })
+    createNodeField({
+      name: `slug`,
+      node,
+      value,
+    })
+  }
+}

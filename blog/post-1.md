@@ -2,6 +2,7 @@
 title: "Sweet Pandas Eating Sweets"
 date: "2017-08-10"
 path: post-1
+description: Post 1
 ---
 
 Pandas are really sweet.

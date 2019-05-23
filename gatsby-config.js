@@ -1,17 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
-    description:
-      'Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.',
-    author: '@gatsbyjs'
+    title: 'Gatsby Starter Blog',
+    author: 'Gatsby',
+    description: 'A starter blog demonstrating what Gatsby can do.'
   },
   plugins: [
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sass',
-    'gatsby-transformer-sharp',
-    'gatsby-transformer-remark',
-    'gatsby-plugin-sharp',
-    'gatsby-plugin-netlify-cms',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -26,6 +19,18 @@ module.exports = {
         path: `${__dirname}/blog/`
       }
     },
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sass',
+    'gatsby-transformer-sharp',
+    'gatsby-transformer-remark',
+    'gatsby-plugin-sharp',
+    'gatsby-plugin-netlify-cms',
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        //trackingId: `ADD YOUR TRACKING ID HERE`,
+      },
+    },
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
@@ -37,9 +42,9 @@ module.exports = {
         display: 'minimal-ui',
         icon: 'src/images/gatsby-icon.png' // This path is relative to the root of the site.
       }
-    }
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    // 'gatsby-plugin-offline',
+    'gatsby-plugin-offline'
   ]
 };

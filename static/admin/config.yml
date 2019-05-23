@@ -14,5 +14,6 @@ collections:
       - { name: path, label: Path }
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
+      - { name: description, label: Description }
       - { name: body, label: Body, widget: markdown }
       - { name: type, label: Type, widget: select, options: ['blog', 'webinar'], default: ['blog'] }
