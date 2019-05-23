@@ -6,7 +6,10 @@ import Articles from '../components/home/home-articles';
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO
+      title="Home"
+      description="Home page description"
+    />
     <Articles />
   </Layout>
 );

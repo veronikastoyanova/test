@@ -10,6 +10,10 @@ const Blog = ({ data }) => {
 
   return (
     <Layout>
+       <SEO
+        title="Blog"
+        description="description for the blog"
+      />
       <div className={classes.BlogPage}>
         {posts.map(({ node }) => <BlogCard key={node.fields.slug} node={node}></BlogCard>)}
       </div>
