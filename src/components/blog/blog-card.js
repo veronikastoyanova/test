@@ -8,6 +8,11 @@ export default ({ node }) => {
   
   return (
     <div className={classes.BlogCard}>
+      <img
+        className={classes.BlogImg}
+        src={node.frontmatter.thumbnail}
+        alt="blog"
+      />
       <div className={classes.InfoBox}>
         <p className={classes.Type} />
         <h2 className={classes.BlogTitle}>
