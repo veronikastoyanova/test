@@ -1,38 +1,21 @@
 import React from 'react';
-import { graphql, Link } from 'gatsby';
+import { graphql } from 'gatsby';
 
 import Layout from '../components/layout/layout';
+import BlogCard from '../components/Blog/blog-card';
 
 const Blog = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
 
   return (
     <Layout>
-      <div>
-        <h1>Amazing Pandas Eating Things</h1>
-        <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
-        {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug;
-          return (
-            <div key={node.fields.slug}>
-              <h3>
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                  {title}
-                </Link>
-              </h3>
-              <small>{node.frontmatter.date}</small>
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: node.frontmatter.description || node.excerpt
-                }}
-              />
-            </div>
-          );
-        })}
-      </div>
+      <h1>Blog</h1>
+      {posts.map(({ node }) => <BlogCard key={node.fields.slug} node={node}></BlogCard>)}
     </Layout>
   );
 };
+
+export default Blog;
 
 export const pageQuery = graphql`
   query {
@@ -52,10 +35,11 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             description
+            shortDescription
+            audience
           }
         }
       }
     }
   }
 `;
-export default Blog;

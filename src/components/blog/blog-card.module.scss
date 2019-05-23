@@ -1,0 +1,48 @@
+.BlogCard {
+  width: 33%;
+  border-radius: 10px;
+  box-shadow: 0px 2px 17px 1px rgba(0, 0, 0, 0.35);
+
+  .BlogImg {
+    width: 100%;
+    margin: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .InfoBox {
+    padding: 0 30px 40px;
+
+    p {
+      margin: 15px 0;
+      color: #7d848b;
+    }
+
+    .BlogTitle {
+      margin: 0;
+    }
+
+    .BlogContent {
+      margin-bottom: 30px;
+    }
+
+    .BlogLink {
+      color: #5a96e5;
+      font-size: 1.1em;
+      font-weight: bold;
+      background-image: none;
+
+      .Arrow {
+        transition: margin 0.3s ease;
+      }
+
+      &:hover {
+        color: #5a96e5c9;
+
+        .Arrow {
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.Title {
+  margin: auto;
+  color: #242f35;
+  text-align: center;
+}
+
+.Articles {
+  display: flex;
+  align-items: baseline;
+  
+  .ArticleBox {
+    display: inline-block;
+    width: 25%;
+    padding: 15px;
+    color: #858c93;
+  }
+}
