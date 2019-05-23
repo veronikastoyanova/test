@@ -11,6 +11,7 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-transformer-remark',
     'gatsby-plugin-sharp',
+    'gatsby-plugin-netlify-cms',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -22,7 +23,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'blog',
-        path: `${__dirname}/src/blog/`
+        path: `${__dirname}/blog/`
       }
     },
     {
