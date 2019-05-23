@@ -2,14 +2,13 @@ import React from 'react';
 import { graphql } from 'gatsby';
 
 import Layout from '../components/layout/layout';
-import BlogCard from '../components/Blog/blog-card';
+import BlogCard from '../components/blog/blog-card';
 
 const Blog = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
 
   return (
     <Layout>
-      <h1>Blog</h1>
       {posts.map(({ node }) => <BlogCard key={node.fields.slug} node={node}></BlogCard>)}
     </Layout>
   );

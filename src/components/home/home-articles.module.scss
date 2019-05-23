@@ -1,17 +1,30 @@
 .Title {
-  margin: auto;
+  margin: 0 auto 40px;
   color: #242f35;
   text-align: center;
+  font-size: 45px;
+  font-weight: 700;
 }
 
 .Articles {
   display: flex;
   align-items: baseline;
-  
+
   .ArticleBox {
     display: inline-block;
     width: 25%;
     padding: 15px;
     color: #858c93;
+
+    .ArticleTitle {
+      margin-bottom: 15px;
+      color: #283238;
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .content {
+      font-size: 15px;
+    }
   }
 }

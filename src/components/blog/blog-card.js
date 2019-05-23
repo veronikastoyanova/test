@@ -4,8 +4,6 @@ import { Link } from 'gatsby';
 import classes from './blog-card.module.scss';
 
 export default ({ node }) => {
-  console.log(node);
-  
   return (
     <div className={classes.BlogCard}>
       <img

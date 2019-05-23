@@ -1,4 +1,7 @@
 .BlogCard {
+  display: inline-block;
+  justify-content: baseline;
+  margin: 20px;
   width: 33%;
   border-radius: 10px;
   box-shadow: 0px 2px 17px 1px rgba(0, 0, 0, 0.35);
@@ -20,6 +23,8 @@
 
     .BlogTitle {
       margin: 0;
+      font-size: 25px;
+      font-weight: 700;
     }
 
     .BlogContent {
