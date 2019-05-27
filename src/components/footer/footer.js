@@ -4,36 +4,36 @@ import logo from '../../assets/logo-white.png';
 import classes from './footer.module.scss';
 
 export default () => (
-  <footer className={classes.Footer}>
-    <div className={classes.Connect}>
-      <img className={classes.Logo} src={logo} alt="ship cars" />
-      <p className={classes.Address}>
+  <footer className={classes.footer}>
+    <div className={classes.connect}>
+      <img className={classes.logo} src={logo} alt="ship cars" />
+      <p className={classes.address}>
         Ship.Cars USA, LLC <br />
         1234 Street Address <br />
         Suite 1300 <br />
         Chicago, IL 12345
       </p>
-      <p className={classes.Contacts}>
+      <p className={classes.contacts}>
         (844) 522-7744 <br />
         support@ship.cars
       </p>
     </div>
-    <div className={classes.FooterLinks}>
-      <div className={classes.LinkCategories}>
-        <h3 className={classes.CategoriesTitle}>Products</h3>
+    <div className={classes.footerLinks}>
+      <div className={classes.linkCategories}>
+        <h3 className={classes.categoriesTitle}>Products</h3>
         <Link to="/">Carrier</Link>
         <Link to="/">Market</Link>
         <Link to="/">Driver</Link>
         <Link to="/">Shipper</Link>
       </div>
-      <div className={classes.LinkCategories}>
-        <h3 className={classes.CategoriesTitle}>Use Cases</h3>
+      <div className={classes.linkCategories}>
+        <h3 className={classes.categoriesTitle}>Use Cases</h3>
         <Link to="/">for Shippers</Link>
         <Link to="/">for Carriers</Link>
         <Link to="/">for Drivers</Link>
       </div>
-      <div className={classes.LinkCategories}>
-        <h3 className={classes.CategoriesTitle}>Company</h3>
+      <div className={classes.linkCategories}>
+        <h3 className={classes.categoriesTitle}>Company</h3>
         <Link to="/">About Ship.Cars</Link>
         <Link to="/">Pricing</Link>
         <Link to="/">Carriers</Link>
@@ -42,8 +42,8 @@ export default () => (
         <Link to="/">Sign Up</Link>
         <Link to="/">Instant Demo</Link>
       </div>
-      <div className={classes.LinkCategories}>
-        <h3 className={classes.CategoriesTitle}>Resources</h3>
+      <div className={classes.linkCategories}>
+        <h3 className={classes.categoriesTitle}>Resources</h3>
         <Link to="/">All Resources</Link>
         <Link to="/">Blog</Link>
         <Link to="/">Webinars</Link>
@@ -53,6 +53,6 @@ export default () => (
         <Link to="/">Status</Link>
       </div>
     </div>
-    <p className={classes.Rights}>Copyright 2019. All Rights Reserved.</p>
+    <p className={classes.rights}>Copyright 2019. All Rights Reserved.</p>
   </footer >
 );
