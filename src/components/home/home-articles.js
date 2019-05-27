@@ -22,12 +22,12 @@ const articles = [
 
 export default () => (
   <article >
-    <h1 className={classes.Title}>Here's why you should give Ship.Cars a spin:</h1>
-    <div className={classes.Articles}>
+    <h1 className={classes.title}>Here's why you should give Ship.Cars a spin:</h1>
+    <div className={classes.articles}>
       {articles.map((article, i) => {
         return (
-          <div key={i} className={classes.ArticleBox}>
-            <h3 className={classes.ArticleTitle}>{article.title}</h3>
+          <div key={i} className={classes.articleBox}>
+            <h3 className={classes.articleTitle}>{article.title}</h3>
             <p className={classes.content}>{article.content}</p>
           </div>
         )
