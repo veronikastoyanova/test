@@ -53,6 +53,6 @@ export default () => (
         <Link to="/">Status</Link>
       </div>
     </div>
-    <p className={classes.Rights}>Copyright 2019. Privacy Policy</p>
+    <p className={classes.Rights}>Copyright 2019. All Rights Reserved.</p>
   </footer >
 );
