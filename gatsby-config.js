@@ -11,7 +11,8 @@ module.exports = {
   siteMetadata: {
     title: 'Gatsby Starter Blog',
     author: 'Gatsby',
-    description: 'A starter blog demonstrating what Gatsby can do.'
+    description: 'A starter blog demonstrating what Gatsby can do.',
+    siteUrl
   },
   plugins: [
     {
