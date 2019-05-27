@@ -1,28 +1,28 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-import classes from './blog-card.module.scss';
+import './blog-card.scss';
 import defaultImg from '../../assets/cars.jpg';
 
 export default ({ node }) => {
   return (
-    <div className={classes.blogCard}>
+    <div className="blogCard">
       <img
-        className={classes.blogImg}
+        className="blogImg"
         src={node.frontmatter.thumbnail || defaultImg}
         alt="blog"
       />
-      <div className={classes.infoBox}>
-        <p className={classes.type} />
-        <h2 className={classes.blogTitle}>
+      <div className="infoBox">
+        <p className="type" />
+        <h2 className="blogTitle">
           {node.frontmatter.title || node.fields.slug}
         </h2>
-        <p className={classes.blogContent}>
+        <p className="blogContent">
           {node.frontmatter.shortDescription}
         </p>
-        <Link className={classes.blogLink} to={node.fields.slug}>
+        <Link className="blogLink" to={node.fields.slug}>
           Read Now
-          <span className={classes.arrow}> ➔</span>
+          <span className="arrow"> ➔</span>
         </Link>
       </div>
     </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import classes from './growingNumber.module.scss';
+import './growingNumber.scss';
 
 class GrowingNum extends React.Component {
   state = {
@@ -32,9 +32,9 @@ class GrowingNum extends React.Component {
 
   render() {
     return (
-      <div className={classes.numberBox}>
-        <p className={classes.number}>{this.state.growingNumber}{this.props.unit}</p>
-        <p className={classes.text}>{this.props.description}</p>
+      <div className="numberBox">
+        <p className="number">{this.state.growingNumber}{this.props.unit}</p>
+        <p className="text">{this.props.description}</p>
       </div>
     );
   }

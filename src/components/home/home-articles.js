@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './home-articles.module.scss';
+import './home-articles.scss';
 
 const articles = [
   {
@@ -22,13 +22,13 @@ const articles = [
 
 export default () => (
   <article >
-    <h1 className={classes.title}>Here's why you should give Ship.Cars a spin:</h1>
-    <div className={classes.articles}>
+    <h1 className="title">Here's why you should give Ship.Cars a spin:</h1>
+    <div className="articles">
       {articles.map((article, i) => {
         return (
-          <div key={i} className={classes.articleBox}>
-            <h3 className={classes.articleTitle}>{article.title}</h3>
-            <p className={classes.content}>{article.content}</p>
+          <div key={i} className="articleBox">
+            <h3 className="articleTitle">{article.title}</h3>
+            <p className="content">{article.content}</p>
           </div>
         )
       })}

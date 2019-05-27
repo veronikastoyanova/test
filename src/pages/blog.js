@@ -3,8 +3,8 @@ import { graphql } from 'gatsby';
 
 import Layout from '../components/layout/layout';
 import BlogCard from '../components/blog/blog-card';
-import classes from './blog.module.scss';
 import SEO from '../components/seo';
+import './blog.scss';
 
 const Blog = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
@@ -15,7 +15,7 @@ const Blog = ({ data }) => {
         title="Blog"
         description="description for the blog"
       />
-      <div className={classes.blogPage}>
+      <div className="blogPage">
         {posts.map(({ node }) => <BlogCard key={node.fields.slug} node={node}></BlogCard>)}
       </div>
     </Layout>

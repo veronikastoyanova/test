@@ -3,7 +3,7 @@ import { Link, graphql } from 'gatsby';
 
 import Layout from '../components/layout/layout';
 import SEO from '../components/seo';
-import classes from './blog.module.scss';
+import './blog.scss';
 
 const BlogPostTemplate = ({ data, pageContext }) => {
   const post = data.markdownRemark;
@@ -15,11 +15,11 @@ const BlogPostTemplate = ({ data, pageContext }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
-      <h1 className={classes.blogTitle}>{post.frontmatter.title}</h1>
-      <p className={classes.blogDate}>{post.frontmatter.date}</p>
-      <div className={classes.blogContent} dangerouslySetInnerHTML={{ __html: post.html }} />
+      <h1 className="blogTitle">{post.frontmatter.title}</h1>
+      <p className="blogDate">{post.frontmatter.date}</p>
+      <div className="blogContent" dangerouslySetInnerHTML={{ __html: post.html }} />
       <hr />
-      <ul className={classes.prevNextArrow}>
+      <ul className="prevNextArrow">
         <li>
           {previous && (
             <Link to={previous.fields.slug} rel="prev">
