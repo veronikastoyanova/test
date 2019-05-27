@@ -2,7 +2,8 @@ import React from 'react';
 import { Link, graphql } from 'gatsby';
 
 import Layout from '../components/layout/layout';
-import SEO from '../components/seo'; 
+import SEO from '../components/seo';
+import classes from './blog.module.scss';
 
 const BlogPostTemplate = ({ data, pageContext }) => {
   const post = data.markdownRemark;
@@ -14,19 +15,11 @@ const BlogPostTemplate = ({ data, pageContext }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
-      <h1 style={{fontSize: '32px', fontWeight: 700, textAlign: 'center', margin: '20px 0'}}>{post.frontmatter.title}</h1>
-      <p style={{fontSize: '20px', fontWeight: 500, textAlign: 'center', margin: '20px 0'}}>{post.frontmatter.date}</p>
-      <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      <h1 className={classes.blogTitle}>{post.frontmatter.title}</h1>
+      <p className={classes.blogDate}>{post.frontmatter.date}</p>
+      <div className={classes.blogContent} dangerouslySetInnerHTML={{ __html: post.html }} />
       <hr />
-      <ul
-        style={{
-          display: `flex`,
-          flexWrap: `wrap`,
-          justifyContent: `space-between`,
-          listStyle: `none`,
-          padding: 0
-        }}
-      >
+      <ul className={classes.prevNextArrow}>
         <li>
           {previous && (
             <Link to={previous.fields.slug} rel="prev">
