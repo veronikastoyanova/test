@@ -15,7 +15,7 @@ const Blog = ({ data }) => {
         title="Blog"
         description="description for the blog"
       />
-      <div className="blogPage">
+      <div className="blog-page">
         {posts.map(({ node }) => <BlogCard key={node.fields.slug} node={node}></BlogCard>)}
       </div>
     </Layout>

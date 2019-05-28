@@ -6,18 +6,18 @@ import './header.scss';
 
 export default () => (
   <header className="header">
-    <Link className="navLink" to="/">
+    <Link className="nav-link" to="/">
       <img className="logo" src={logo} alt="ship cars" />
     </Link>
-    <span className="navbarMenu">
-      <Link className="navLink" to="/website">Products</Link>
-      <Link className="navLink" to="/website">Use Cases</Link>
-      <Link className="navLink" to="/website">Company</Link>
-      <Link className="navLink" to="/blog">Resources</Link>
+    <span className="navbar-menu">
+      <Link className="nav-link" to="/website">Products</Link>
+      <Link className="nav-link" to="/website">Use Cases</Link>
+      <Link className="nav-link" to="/website">Company</Link>
+      <Link className="nav-link" to="/blog">Resources</Link>
     </span>
     <span>
-      <Link className="navLink" to="">Login</Link>
-      <button className="signUpButton">Sign Up</button>
+      <Link className="nav-link" to="">Log In</Link>
+      <button className="sign-up-button">Sign Up</button>
     </span>
   </header>
 );

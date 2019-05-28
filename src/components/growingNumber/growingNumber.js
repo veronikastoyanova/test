@@ -32,7 +32,7 @@ class GrowingNum extends React.Component {
 
   render() {
     return (
-      <div className="numberBox">
+      <div className="number-box">
         <p className="number">{this.state.growingNumber}{this.props.unit}</p>
         <p className="text">{this.props.description}</p>
       </div>

@@ -19,21 +19,21 @@ export default () => (
         support@ship.cars
       </p>
     </div>
-    <div className="footerLinks">
-      <div className="linkCategories">
-        <h3 className="categoriesTitle">Products</h3>
+    <div className="footer-links">
+      <div className="link-categories">
+        <h3 className="categories-title">Products</h3>
         <Link to="/">Carrier</Link>
         <Link to="/">Market</Link>
         <Link to="/">Driver</Link>
         <Link to="/">Shipper</Link>
       </div>
-      <div className="linkCategories">
-        <h3 className="categoriesTitle">Use Cases</h3>
+      <div className="link-categories">
+        <h3 className="categories-title">Use Cases</h3>
         <Link to="/">for Shippers &#38; Brokers</Link>
         <Link to="/">for Carriers &#38; Drivers</Link>
       </div>
-      <div className="linkCategories">
-        <h3 className="categoriesTitle">Company</h3>
+      <div className="link-categories">
+        <h3 className="categories-title">Company</h3>
         <Link to="/">About Ship.Cars</Link>
         <Link to="/">Pricing</Link>
         <Link to="/">Carriers</Link>
@@ -41,8 +41,8 @@ export default () => (
         <Link to="/">Sign Up</Link>
         <Link to="/">Privacy Policy</Link>
       </div>
-      <div className="linkCategories">
-        <h3 className="categoriesTitle">Resources</h3>
+      <div className="link-categories">
+        <h3 className="categories-title">Resources</h3>
         <Link to="/">Help Center</Link>
         <Link to="/">Get Started</Link>
         <Link to="/">Importing orders</Link>

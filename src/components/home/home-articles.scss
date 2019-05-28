@@ -1,6 +1,8 @@
+@import "../../styles/common/styles";
+
 .title {
   margin: 0 auto 40px;
-  color: #242f35;
+  color: $dark;
   text-align: center;
   font-size: 45px;
   font-weight: 700;
@@ -10,15 +12,15 @@
   display: flex;
   align-items: baseline;
 
-  .articleBox {
+  .article-box {
     display: inline-block;
     width: 25%;
     padding: 15px;
-    color: #858c93;
+    color: $gray-slate-secondary;
 
-    .articleTitle {
+    .article-title {
       margin-bottom: 15px;
-      color: #283238;
+      color: $dark;
       font-size: 20px;
       font-weight: 700;
     }

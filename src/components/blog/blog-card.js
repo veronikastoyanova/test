@@ -6,21 +6,21 @@ import defaultImg from '../../assets/cars.jpg';
 
 export default ({ node }) => {
   return (
-    <div className="blogCard">
+    <div className="blog-card">
       <img
-        className="blogImg"
+        className="blog-img"
         src={node.frontmatter.thumbnail || defaultImg}
         alt="blog"
       />
-      <div className="infoBox">
+      <div className="info-box">
         <p className="type" />
-        <h2 className="blogTitle">
+        <h2 className="blog-title">
           {node.frontmatter.title || node.fields.slug}
         </h2>
-        <p className="blogContent">
+        <p className="blog-content">
           {node.frontmatter.shortDescription}
         </p>
-        <Link className="blogLink" to={node.fields.slug}>
+        <Link className="blog-link" to={node.fields.slug}>
           Read Now
           <span className="arrow"> ➔</span>
         </Link>

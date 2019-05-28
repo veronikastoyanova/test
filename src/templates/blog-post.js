@@ -15,11 +15,11 @@ const BlogPostTemplate = ({ data, pageContext }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
-      <h1 className="blogTitle">{post.frontmatter.title}</h1>
-      <p className="blogDate">{post.frontmatter.date}</p>
-      <div className="blogContent" dangerouslySetInnerHTML={{ __html: post.html }} />
+      <h1 className="blog-title">{post.frontmatter.title}</h1>
+      <p className="blog-date">{post.frontmatter.date}</p>
+      <div className="blog-content" dangerouslySetInnerHTML={{ __html: post.html }} />
       <hr />
-      <ul className="prevNextArrow">
+      <ul className="prev-next-arrow">
         <li>
           {previous && (
             <Link to={previous.fields.slug} rel="prev">

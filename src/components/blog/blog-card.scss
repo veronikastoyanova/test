@@ -1,36 +1,38 @@
-.blogCard {
+@import "../../styles/common/styles";
+
+.blog-card {
   margin: 20px;
   width: 33%;
   border-radius: 10px;
   box-shadow: 0px 2px 17px 1px rgba(0, 0, 0, 0.35);
 
-  .blogImg {
+  .blog-img {
     width: 100%;
     margin: 0;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
   }
 
-  .infoBox {
+  .info-box {
     padding: 0 30px 40px;
 
     p {
       margin: 15px 0;
-      color: #7d848b;
+      color: $gray;
     }
 
-    .blogTitle {
+    .blog-title {
       margin: 0;
       font-size: 25px;
       font-weight: 700;
     }
 
-    .blogContent {
+    .blog-content {
       margin-bottom: 30px;
     }
 
-    .blogLink {
-      color: #5a96e5;
+    .blog-link {
+      color: $light-blue-info;
       font-size: 1.1em;
       font-weight: bold;
       background-image: none;
@@ -40,7 +42,7 @@
       }
 
       &:hover {
-        color: #5a96e5c9;
+        color: #0ac0ff;
 
         .arrow {
           margin-left: 5px;

@@ -26,8 +26,8 @@ export default () => (
     <div className="articles">
       {articles.map((article, i) => {
         return (
-          <div key={i} className="articleBox">
-            <h3 className="articleTitle">{article.title}</h3>
+          <div key={i} className="article-box">
+            <h3 className="article-title">{article.title}</h3>
             <p className="content">{article.content}</p>
           </div>
         )
