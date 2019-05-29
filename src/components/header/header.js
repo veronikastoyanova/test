@@ -26,7 +26,7 @@ const headerCongif = [
   {
     title: 'Company',
     menu: [
-      { title: 'About', icon: 'about',  to: '/', description: 'lorem' },
+      { title: 'About', icon: 'about', to: '/', description: 'lorem' },
       { title: 'Prices', icon: 'prices', to: '/', description: 'lorem' },
       { title: 'Careers', icon: 'careers', to: '/', description: 'lorem' },
       { title: 'Contact', icon: 'contact', to: '/', description: 'lorem' }
@@ -34,8 +34,8 @@ const headerCongif = [
   }
 ];
 
-export default () => (
-  <header className="header">
+export default (props) => (
+  <header className={`header ${props.options.fixHeader ? 'fixed' : ''}`}>
     <Link className="nav-item" to="/">
       <img className="logo" src={logo} alt="ship cars" />
     </Link>
@@ -44,8 +44,10 @@ export default () => (
       <a className="nav-item" href="https://help.ship.cars/">Knowledge base</a>
     </div>
     <div>
-      <a className="nav-item" href="https://ship.cars/login">Log In</a>
-      <button className="sign-up-button">Sign Up</button>
+      <button className="button outlined">Watch An Instant Demo</button>
+      <a className="nav-item" href="https://ship.cars/login">
+        <button className="button filled">Log In</button>
+      </a>
     </div>
   </header>
 );

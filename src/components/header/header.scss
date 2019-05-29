@@ -1,4 +1,6 @@
-@import '../../styles/common/styles';
+@import "../../styles/common/styles";
+@import "../../styles/common/buttons";
+
 
 .header {
   position: fixed;
@@ -8,10 +10,13 @@
   height: 87px;
   padding: 25px;
   background-color: #fff;
-  box-shadow: 0 3px 5px 0 rgba(0,0,0,0.5);
   align-items: center;
   box-sizing: border-box;
-
+  
+  &.fixed {
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.5);
+  }
+  
   .nav-item {
     color: $dark;
     font-size: 0.9em;
@@ -22,7 +27,7 @@
     &:hover {
       color: $gray-slate-secondary;
     }
-    
+
     .logo {
       width: 200px;
       margin: 0;
@@ -35,21 +40,5 @@
     align-items: center;
     width: 400px;
     height: 25px;
-  }
-
-  .sign-up-button {
-    width: 80px;
-    height: 45px;
-    margin-left: 25px;
-    color: $snow;
-    background-color: #58c06d;
-    border: none;
-    border-radius: 5px;
-    outline: none;
-    cursor: pointer;
-
-    &:hover {
-      background-color: #58c06da6;
-    }
   }
 }

@@ -14,9 +14,16 @@ import Footer from '../footer/footer';
 import './layout.scss';
 
 const Layout = ({ children }) => {
+  let fixHeader = false;
+  
+  window.addEventListener('scroll', () => {
+    debugger;
+    fixHeader = window.scrollY > 0;
+  });
+  
   return (
-    <>
-      <Header />
+    <div>
+      <Header options={{ fixHeader }}/>
       <div
         style={{
           margin: '0 auto',
@@ -27,7 +34,7 @@ const Layout = ({ children }) => {
         <main>{children}</main>
       </div>
       <Footer />
-    </>
+    </div>
   );
 };
 
