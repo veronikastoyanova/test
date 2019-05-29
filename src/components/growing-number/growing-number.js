@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './growingNumber.scss';
+import './growing-number.scss';
 
 class GrowingNum extends React.Component {
   state = {

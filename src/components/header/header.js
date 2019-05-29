@@ -3,22 +3,49 @@ import { Link } from 'gatsby';
 
 import logo from '../../assets/logomark-full.svg';
 import './header.scss';
-import DropDown from '../drop-down-menu/dropDown';
+import DropDown from '../drop-down-menu/drop-down';
+
+const headerCongif = [
+  {
+    title: 'Product',
+    menu: [
+      { title: 'Calcatron', icon: 'calcatron', to: '/', description: 'Predictive Rate Engine.' },
+      { title: 'Market Loadboard', icon: 'market', to: '/', description: 'Loadboard' },
+      { title: 'Carrier TMS', icon: 'carrier', to: '/', description: 'TMS' },
+      { title: 'Shipper TMS', icon: 'shipper', to: '/', description: 'TMS' },
+      { title: 'Driver ePOD', icon: 'driver', to: '/', description: 'ePOD' }
+    ]
+  },
+  {
+    title: 'Use case',
+    menu: [
+      { title: 'Brokers & Shippers', icon: '', to: '/', description: 'lorem' },
+      { title: 'Carriers & Drivers', icon: '', to: '/', description: 'lorem' }
+    ]
+  },
+  {
+    title: 'Company',
+    menu: [
+      { title: 'About', icon: 'about',  to: '/', description: 'lorem' },
+      { title: 'Prices', icon: 'prices', to: '/', description: 'lorem' },
+      { title: 'Careers', icon: 'careers', to: '/', description: 'lorem' },
+      { title: 'Contact', icon: 'contact', to: '/', description: 'lorem' }
+    ]
+  }
+];
 
 export default () => (
   <header className="header">
     <Link className="nav-item" to="/">
       <img className="logo" src={logo} alt="ship cars" />
     </Link>
-    <span className="navbar-menu">
-      <DropDown name="Product" item="productMenu" />
-      <DropDown name="Use Case" item="useCaseMenu" />
-      <DropDown name="Company" item="companyMenu" />
+    <div className="navbar-menu">
+      {headerCongif.map((item, index) => <DropDown item={item} key={index} />)}
       <a className="nav-item" href="https://help.ship.cars/">Knowledge base</a>
-    </span>
-    <span>
+    </div>
+    <div>
       <a className="nav-item" href="https://ship.cars/login">Log In</a>
       <button className="sign-up-button">Sign Up</button>
-    </span>
+    </div>
   </header>
 );

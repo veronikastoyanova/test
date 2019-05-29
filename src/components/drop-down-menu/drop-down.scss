@@ -1,0 +1,107 @@
+@import '../../styles/common/styles';
+@import '../../styles/common/icons';
+
+.dropdown {
+  position: relative;
+
+  &:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown-content {
+    position: absolute;
+    display: flex;
+    left: -90px;
+    display: none;
+    min-width: 250px;
+    padding: 30px 0;
+    z-index: 1;
+
+    .triangle-with-shadow {
+      position: absolute;
+      top: 0;
+      left: 101px;
+      width: 30px;
+      height: 30px;
+      overflow: hidden;
+      z-index: 2;
+    }
+
+    .triangle-with-shadow:after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: white;
+      -webkit-transform: rotate(45deg);
+      transform: rotate(-45deg);
+      top: 21px;
+      left: 4px;
+      box-shadow: -2px 2px 6px 0px rgba(0, 0, 0, 0.32);
+    }
+
+    .content {
+      position: relative;
+      min-width: 350px;
+      padding: 30px 10px;
+      background-color: white;
+      border-radius: 5px;
+      box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.32);
+    }
+
+    .content-wrapper {
+      &:hover .link-title {
+        margin-top: -20px;
+      }
+
+      &:hover .img-wrapper {
+        filter: grayscale(0);
+      }
+
+      .img-wrapper {
+        width: 24px;
+        height: 37px;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+
+      .link-info {
+        margin: 0 22px;
+        height: 40px;
+        overflow: hidden;
+
+        .link-title {
+          padding-bottom: 5px;
+          font-size: 17px;
+          color: $dark;
+          letter-spacing: 0.4px;
+          transition: margin 0.4s ease;
+        }
+
+        .link-description {
+          margin-bottom: 3px;
+          color: #798189;
+          font-size: 12px;
+          line-height: 1.42;
+          letter-spacing: 0.3px;
+        }
+
+        .learn-more {
+          font-size: 12px;
+          font-weight: 300;
+          line-height: 1.42;
+          letter-spacing: 0.3px;
+          color: #5a96e5;
+        }
+      }
+    }
+
+    a {
+      display: flex;
+      padding: 12px;
+      color: black;
+      text-decoration: none;
+    }
+  }
+}

@@ -3,7 +3,7 @@ import React from 'react';
 import Layout from '../components/layout/layout';
 import SEO from '../components/seo';
 import Articles from '../components/home/home-articles';
-import GrowingNum from '../components/growingNumber/growingNumber';
+import GrowingNum from '../components/growing-number/growing-number';
 
 const IndexPage = () => (
   <Layout>
