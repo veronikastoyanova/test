@@ -43,7 +43,7 @@ export default (props) => (
       <a className="nav-item" href="https://help.ship.cars/">Knowledge base</a>
     </div>
     <div className="buttons-container">
-      <div className="cover{props.fixHeader ? 'cover' : 'transparent'}"></div>
+      <div className="cover"></div>
       <button className={`button outlined fixed-possition ${props.fixHeader ? 'appear' : 'hidden'}`}>
         Watch An Instant Demo
       </button>
