@@ -20,16 +20,17 @@ const articles = [
 ];
 
 export default () => (
-  <article >
+  <article className="home-articles">
     <h1 className="title">Here's why you should give Ship.Cars a spin:</h1>
     <div className="articles">
       {articles.map((article, i) => {
         return (
           <div key={i} className="article-box">
+            <div className="article-icon"></div>
             <h3 className="article-title">{article.title}</h3>
             <p className="content">{article.content}</p>
           </div>
-        )
+        );
       })}
     </div>
   </article>
