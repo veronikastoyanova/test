@@ -8,11 +8,11 @@
   background-color: #fff;
   align-items: center;
   box-sizing: border-box;
-  
+
   &.fixed {
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
   }
-  
+
   .nav-item {
     color: $dark;
     font-size: 0.9em;
@@ -36,5 +36,30 @@
     align-items: center;
     width: 400px;
     height: 25px;
+  }
+  
+  .buttons-container{
+    width: 325px;
+    align-items: flex-end;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .fixed-possition {
+    left: 150px;
+  }
+
+  .cover {
+    height: 87px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 150px;
+    background-color: white;
+    z-index: 1;
+  }
+  
+  .front{
+    z-index: 2;
   }
 }

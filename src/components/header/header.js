@@ -34,9 +34,7 @@ const headerCongif = [
 ];
 
 export default (props) => (
-  <header
-    className={`header ${props.fixHeader ? 'fixed' : ''}`}
-  >
+  <header className={`header ${props.fixHeader ? 'fixed' : ''}`}>
     <Link className="nav-item" to="/">
       <img className="logo" src={logo} alt="ship cars" />
     </Link>
@@ -44,10 +42,13 @@ export default (props) => (
       {headerCongif.map((item, index) => <DropDown item={item} key={index} />)}
       <a className="nav-item" href="https://help.ship.cars/">Knowledge base</a>
     </div>
-    <div>
-      <button className={`button outlined ${props.fixHeader ? '' : 'hidden'}`}>Watch An Instant Demo</button>
+    <div className="buttons-container">
+      <div className="cover{props.fixHeader ? 'cover' : 'transparent'}"></div>
+      <button className={`button outlined fixed-possition ${props.fixHeader ? 'appear' : 'hidden'}`}>
+        Watch An Instant Demo
+      </button>
       <a className="nav-item" href="https://ship.cars/login">
-        <button className={`button ${props.fixHeader ? 'filled' : 'outlined'}`}>
+        <button className={`button front ${props.fixHeader ? 'filled' : 'outlined'}`}>
           {props.fixHeader ? 'Get Started' : 'Log In'}
         </button>
       </a>
