@@ -1,14 +1,12 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import './drop-down.scss';
 
 export default (props) => {
-
   return (
     <div className="dropdown">
       <span className="nav-item">{props.item.title}</span>
       <div className="dropdown-content">
-        <div class="triangle-with-shadow"></div>
+        <div className="triangle-with-shadow"></div>
         <div className="content">
           {props.item.menu.map((link, index) => {
             const iconClasses = ['img-wrapper'];

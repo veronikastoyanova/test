@@ -3,7 +3,6 @@ import { Link, graphql } from 'gatsby';
 
 import Layout from '../components/layout/layout';
 import SEO from '../components/seo';
-import './blog.scss';
 
 const BlogPostTemplate = ({ data, pageContext }) => {
   const post = data.markdownRemark;

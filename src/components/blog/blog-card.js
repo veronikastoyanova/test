@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-import './blog-card.scss';
 import defaultImg from '../../assets/cars.jpg';
 
 export default ({ node }) => {

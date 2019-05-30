@@ -30,15 +30,19 @@
     transition: all 0.3s;
   }
 
+  &.hidden {
+    visibility: hidden;
+  }
+
   &.filled {
     color: white;
     background-color: $purple-primary;
     border-color: $purple-primary;
-    
+
     &:hover {
       background-color: #230d4f;
     }
-    
+
     &:disabled {
       opacity: 0.5;
       background-color: #7c68a8;
@@ -52,7 +56,7 @@
     &:hover,
     &:active {
       color: white;
-      
+
       &:after {
         background-color: $purple-primary;
       }

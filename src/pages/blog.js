@@ -4,7 +4,6 @@ import { graphql } from 'gatsby';
 import Layout from '../components/layout/layout';
 import BlogCard from '../components/blog/blog-card';
 import SEO from '../components/seo';
-import './blog.scss';
 
 const Blog = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;

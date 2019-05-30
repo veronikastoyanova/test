@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import logo from '../../assets/logo-white.png';
-
-import './footer.scss';
+import logo from '../../assets/logos/logo-shipcars-white.svg';
 
 export default () => (
   <footer className="footer">

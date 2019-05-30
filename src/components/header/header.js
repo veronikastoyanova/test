@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-import logo from '../../assets/logomark-full.svg';
-import './header.scss';
+import logo from '../../assets/logos/logo-shipcars.svg';
 import DropDown from '../drop-down-menu/drop-down';
 
 const headerCongif = [
@@ -35,7 +34,9 @@ const headerCongif = [
 ];
 
 export default (props) => (
-  <header className={`header ${props.options.fixHeader ? 'fixed' : ''}`}>
+  <header
+    className={`header ${props.fixHeader ? 'fixed' : ''}`}
+  >
     <Link className="nav-item" to="/">
       <img className="logo" src={logo} alt="ship cars" />
     </Link>
@@ -44,9 +45,11 @@ export default (props) => (
       <a className="nav-item" href="https://help.ship.cars/">Knowledge base</a>
     </div>
     <div>
-      <button className="button outlined">Watch An Instant Demo</button>
+      <button className={`button outlined ${props.fixHeader ? '' : 'hidden'}`}>Watch An Instant Demo</button>
       <a className="nav-item" href="https://ship.cars/login">
-        <button className="button filled">Log In</button>
+        <button className={`button ${props.fixHeader ? 'filled' : 'outlined'}`}>
+          {props.fixHeader ? 'Get Started' : 'Log In'}
+        </button>
       </a>
     </div>
   </header>

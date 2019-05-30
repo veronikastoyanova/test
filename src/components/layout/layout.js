@@ -11,32 +11,48 @@ import PropTypes from 'prop-types';
 import Header from '../header/header';
 import Footer from '../footer/footer';
 
-import './layout.scss';
+import '../../styles/layout.scss';
 
-const Layout = ({ children }) => {
-  let fixHeader = false;
-  
-  window.addEventListener('scroll', () => {
-    debugger;
-    fixHeader = window.scrollY > 0;
-  });
-  
-  return (
-    <div>
-      <Header options={{ fixHeader }}/>
-      <div
-        style={{
-          margin: '0 auto',
-          maxWidth: '1440px',
-          padding: '100px 40px 40px'
-        }}
-      >
-        <main>{children}</main>
-      </div>
-      <Footer />
-    </div>
-  );
-};
+class Layout extends React.Component {
+  state = {
+    scrolling: false
+  }
+
+  handleScroll = (event) => {
+    if (window.scrollY === 0 && this.state.scrolling === true) {
+      this.setState({ scrolling: false });
+    }
+    else if (window.scrollY !== 0 && this.state.scrolling !== true) {
+      this.setState({ scrolling: true });
+    }
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+
+  render() {
+    return (
+      <div>
+        <Header fixHeader={this.state.scrolling} />
+        <div
+          style={{
+            margin: '0 auto',
+            maxWidth: '1440px',
+            padding: '100px 40px 40px'
+          }}
+        >
+          <main>{this.props.children}</main>
+        </div>
+        <Footer />
+      </div >
+    );
+  }
+}
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired

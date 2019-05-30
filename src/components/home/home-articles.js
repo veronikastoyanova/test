@@ -1,5 +1,4 @@
 import React from 'react';
-import './home-articles.scss';
 
 const articles = [
   {

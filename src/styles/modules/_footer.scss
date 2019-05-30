@@ -1,5 +1,3 @@
-@import '../../styles/common/styles';
-
 .footer {
   display: flex;
   flex-flow: row wrap;
@@ -15,7 +13,6 @@
     .logo {
       width: 220px;
       margin-bottom: 30px;
-      background-color: $snow;
     }
 
     .address {
