@@ -15,13 +15,13 @@ const IndexPage = () => (
     <div style={{
       display: 'flex',
       justifyContent: 'space-between',
-      backgroundColor: '#EEF5FD',
+      backgroundColor: '#242f35',
       padding: '100px 250px',
       margin: '100px -235px'
     }}>
-      <GrowingNum number="8000" description="Carriers in our Network" />
-      <GrowingNum number="17000" description="Loads Dispatched Per Month" />
-      <GrowingNum number="200" unit="%" description="More Efficien Than the Next Leading TMS Software" />
+      <GrowingNum number="8" unit="k" description="Carriers in our Network" />
+      <GrowingNum number="17" unit="k" description="Loads Dispatched Per Month" />
+      <GrowingNum number="200" unit="%" description="More Efficient Than the Next Leading TMS Software" />
       <GrowingNum number="30" unit="%" description="Loads Ordered From Our Loadboard" />
     </div>
   </Layout>

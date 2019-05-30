@@ -18,7 +18,7 @@ class GrowingNum extends React.Component {
   growNum = () => {
     if (this.state.growingNumber < this.state.number) {
       const interval = this.state.number / 8;
-      const randomNum = Math.floor(Math.random() * interval);
+      const randomNum = Math.ceil(Math.random() * interval);
       const growingNumber = this.state.growingNumber + randomNum;
       this.setState({ growingNumber });
     }

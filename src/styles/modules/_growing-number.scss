@@ -4,14 +4,15 @@
   text-align: center;
   
   .number {
-    color: $purple-primary;
-    font-size: 4rem;
-    font-weight: 700;
+    color: #fff;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 90px;
+    font-weight: bold;
   }
 
   .text {
     padding: 20px 0;
-    color: $gray-slate-secondary;
+    color: $steel;
     font-size: 1.2rem;
   }
 }
