@@ -7,34 +7,32 @@
 
   .dropdown-content {
     position: absolute;
-    display: flex;
     left: -90px;
+    z-index: 1;
     display: none;
     min-width: 250px;
     padding: 30px 0;
-    z-index: 1;
 
     .triangle-with-shadow {
       position: absolute;
       top: 0;
-      left: 101px;
+      left: 100px;
+      z-index: 2;
       width: 30px;
       height: 30px;
       overflow: hidden;
-      z-index: 2;
     }
 
     .triangle-with-shadow:after {
-      content: '';
       position: absolute;
+      top: 21px;
+      left: 4px;
       width: 20px;
       height: 20px;
       background: #fff;
-      -webkit-transform: rotate(45deg);
-      transform: rotate(-45deg);
-      top: 21px;
-      left: 4px;
       box-shadow: -2px 2px 6px 0px rgba(0, 0, 0, 0.32);
+      transform: rotate(-45deg);
+      content: '';
     }
 
     .content {
@@ -64,14 +62,14 @@
       }
 
       .link-info {
-        margin: 0 22px;
         height: 40px;
+        margin: 0 22px;
         overflow: hidden;
 
         .link-title {
           padding-bottom: 5px;
-          font-size: 17px;
           color: $dark;
+          font-size: 17px;
           letter-spacing: 0.4px;
           transition: margin 0.4s ease;
         }
@@ -80,16 +78,16 @@
           margin-bottom: 3px;
           color: #798189;
           font-size: 12px;
-          line-height: 1.42;
           letter-spacing: 0.3px;
+          line-height: 1.42;
         }
 
         .learn-more {
+          color: #5a96e5;
           font-size: 12px;
           font-weight: 700;
-          line-height: 1.42;
           letter-spacing: 0.3px;
-          color: #5a96e5;
+          line-height: 1.42;
         }
       }
     }
