@@ -44,11 +44,24 @@ export default (props) => (
     </div>
     <div className="buttons-container">
       <div className="cover"></div>
-      <button className={`button outlined fixed-possition ${props.fixHeader ? 'appear' : 'hidden'}`}>
+      <button
+        id="Instant demo-Desktop-Header"
+        className={`button outlined fixed-possition ${props.fixHeader ? 'appear' : 'hidden'}`}
+      >
         Watch An Instant Demo
       </button>
       <a className="nav-item" href="https://ship.cars/login">
-        <button className={`button front ${props.fixHeader ? 'filled' : 'outlined'}`}>
+        <button
+          id={isDesktop ? 'GetStarted-Desktop-Header' : 'GetStarted-Mobile-Header'}
+          className={
+            `button front 
+            ${props.fixHeader ? 'filled' : 'outlined'}
+            ${props.fixHeader
+              ? isDesktop ? 'desktop-tg-pcta-header' : 'mobile-tg-pcta-header'
+              : isDesktop ? 'desktop-tg-scta-header' : 'mobile-tg-scta-header'}
+            ${isDesktop ? 'desktop-tg-pcta-header' : 'mobile-tg-pcta-header'}`
+          }
+        >
           {props.fixHeader ? 'Get Started' : 'Log In'}
         </button>
       </a>

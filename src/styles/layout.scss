@@ -6,12 +6,15 @@
 @import "common/icons";
 @import "common/buttons";
 
-//Modules
-@import "modules/header";
-@import "modules/footer";
-@import "modules/blog-card";
-@import "modules/blog";
-@import "modules/drop-down";
-@import "modules/growing-number";
-@import "modules/home-articles";
-@import "modules/blog-post";
+//Components
+@import "components/header";
+@import "components/footer";
+@import "components/blog-card";
+@import "components/blog";
+@import "components/drop-down";
+@import "components/growing-number";
+@import "components/home-articles";
+@import "components/blog-post";
+
+//Pages
+@import "pages/index";

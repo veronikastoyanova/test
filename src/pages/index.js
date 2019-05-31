@@ -12,13 +12,7 @@ const IndexPage = () => (
       description="Home page description"
     />
     <Articles />
-    <div style={{
-      display: 'flex',
-      justifyContent: 'space-between',
-      backgroundColor: '#242f35',
-      padding: '100px 250px',
-      margin: '100px -235px'
-    }}>
+    <div className="statistics" >
       <GrowingNum number="8" unit="k" description="Carriers in our Network" />
       <GrowingNum number="17" unit="k" description="Loads Dispatched Per Month" />
       <GrowingNum number="200" unit="%" description="More Efficient Than the Next Leading TMS Software" />
