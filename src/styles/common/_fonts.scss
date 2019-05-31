@@ -1,0 +1,40 @@
+$roboto-directory: "../assets/fonts/Roboto/";
+$Exo2-directory: "../assets/fonts/Exo2/";
+$roboto: "Roboto", sans-serif;
+$Exo2: "Exo2", sans-serif;
+
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 400;
+  src: url('#{$roboto-directory}Roboto-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 500;
+  src: url('#{$roboto-directory}Roboto-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 700;
+  src: url('#{$roboto-directory}Roboto-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Exo2';
+  font-weight: 400;
+  src: url('#{$Exo2-directory}Exo2-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Exo2';
+  font-weight: 500;
+  src: url('#{$Exo2-directory}Exo2-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Exo2';
+  font-weight: 700;
+  src: url('#{$Exo2-directory}Exo2-Bold.ttf') format('truetype');
+}

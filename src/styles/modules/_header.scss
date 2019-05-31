@@ -43,11 +43,11 @@
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    width: 350px;
+    width: 365px;
   }
 
   .fixed-possition {
-    left: 150px;
+    left: 250px;
   }
 
   .cover {
@@ -55,12 +55,13 @@
     top: 0;
     right: 0;
     z-index: 1;
-    width: 150px;
+    width: 175px;
     height: 87px;
     background-color: rgba(255, 255, 255, 0.98);
   }
 
   .front {
     z-index: 2;
+    width: 137px;
   }
 }
