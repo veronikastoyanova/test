@@ -33,6 +33,8 @@ const headerCongif = [
   }
 ];
 
+const isDesktop = true;
+
 export default (props) => (
   <header className={`header ${props.fixHeader ? 'fixed' : ''}`}>
     <Link className="nav-item" to="/">
