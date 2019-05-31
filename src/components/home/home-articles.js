@@ -2,20 +2,20 @@ import React from 'react';
 
 const articles = [
   {
-    title: 'Access to Calcatron Calculator',
-    content: 'Our very own predicative rate engine that self-adjust to provide consistently accurate pricing for quick and precise quotes.'
+    title: 'Receive Accurate & Instant Quotes Within Milliseconds',
+    content: 'Access to our very own predicative rate engine that self-adjusts to provide consistently accurate pricing for quick and precise quotes.'
   },
   {
-    title: 'Join the Market Loadboard',
-    content: 'Access thousands of loads with new orders uploaded daily and select a carrier from our growing list of over 10,000!'
+    title: 'Easily & Efficiently Locate Loads Matching Preferred Routes',
+    content: 'View thousands of loads with new orders uploaded daily and select a carrier from our growing list of over 10,000!'
   },
   {
-    title: 'Experience Shipper & Carrier Dashboards',
-    content: 'Shippers and Carriers alike can access their individual CRM and TMS dashboards to help automate the auto transporting and car dispaching processes.'
+    title: 'Automate & Manage Your Business\' Workflow Operations',
+    content: 'Shippers and Carriers alike can join their individual TMS dashboards to help automate the auto transporting and car dispatching processes.'
   },
   {
-    title: 'Download the ePOD App',
-    content: 'Available on IOS and Android, download Driver app for paperless transactions, realtime updates on pick-ups and deliveries, and more - the perfect co-pilot for your transports.'
+    title: 'Automate the Pick-Up & Delivery Process with ePOD',
+    content: 'Download the Driver ePOD app for paperless transactions, realtime updates on pick-ups and deliveries, and more - the perfect co-pilot for your transports. Available on iOS and Android now.'
   }
 ];
 

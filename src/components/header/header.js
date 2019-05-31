@@ -33,7 +33,9 @@ const headerCongif = [
   }
 ];
 
-const isDesktop = true;
+const isMobile = () => {
+  return window.innerWidth <= 800 || 'ontouchstart' in document.documentElement;
+};
 
 export default (props) => (
   <header className={`header ${props.fixHeader ? 'fixed' : ''}`}>
@@ -54,14 +56,14 @@ export default (props) => (
       </button>
       <a className="nav-item" href="https://ship.cars/login">
         <button
-          id={isDesktop ? 'GetStarted-Desktop-Header' : 'GetStarted-Mobile-Header'}
+          id={isMobile() ? 'GetStarted-Mobile-Header' : 'GetStarted-Desktop-Header'}
           className={
             `button front 
             ${props.fixHeader ? 'filled' : 'outlined'}
             ${props.fixHeader
-              ? isDesktop ? 'desktop-tg-pcta-header' : 'mobile-tg-pcta-header'
-              : isDesktop ? 'desktop-tg-scta-header' : 'mobile-tg-scta-header'}
-            ${isDesktop ? 'desktop-tg-pcta-header' : 'mobile-tg-pcta-header'}`
+              ? isMobile() ? 'mobile-tg-pcta-header' : 'desktop-tg-pcta-header'
+              : isMobile() ? 'mobile-tg-scta-header' : 'desktop-tg-scta-header'}
+            ${isMobile() ? 'mobile-tg-pcta-header' : 'desktop-tg-pcta-header'}`
           }
         >
           {props.fixHeader ? 'Get Started' : 'Log In'}
