@@ -15,9 +15,9 @@ export default (props) => {
               <Link className="content-wrapper" to={link.to} key={index}>
                 <div className={iconClasses.join(' ')}></div>
                 <div className="link-info">
-                  <p className="link-title">{link.title}</p>
-                  <p className="link-description">{link.description}</p>
-                  <p className="learn-more">Learn more ➔</p>
+                  <span className="link-title">{link.title}</span>
+                  <span className="link-description">{link.description}</span>
+                  <span className="learn-more">Learn more ➔</span>
                 </div>
               </Link>
             );
